@@ -274,8 +274,8 @@ html, body {
   transform: translateY(-50%);
   mix-blend-mode: multiply; /* 画像の白い背景を透過 */
   
-  /* アニメーション：8秒かけて右へループ（右足左足のトコトコ付き） */
-  animation: walk-one-way 8s linear infinite, step-bounce 0.3s ease-in-out infinite alternate;
+  /* アニメーション：3秒かけて右へループ（右足左足のトコトコ付き） */
+  animation: walk-one-way 3s linear infinite, step-bounce 0.3s ease-in-out infinite alternate;
 }
 
 /* 左から右へ進み、右端でパッと消えてまた左から現れる動き */
@@ -301,6 +301,17 @@ html, body {
   }
   100% {
     transform: translateY(-58%) rotate(3deg);
+  }
+}
+/* 4. ラグなしでループさせるキーフレーム */
+@keyframes dog-loop-smooth {
+  0% {
+    /* 画面の左側の十分な外側からスタート（画像が見えない位置から） */
+    left: -200px; 
+  }
+  100% {
+    /* 画面の右端のさらに外側まで移動しきる */
+    left: 100%; 
   }
 }
 
