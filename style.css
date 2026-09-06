@@ -255,9 +255,4 @@ html, body {
     font-size: 14px !important;
   }
 }
-  /* pタグの設定に追記 */
-  p {
-    font-size: 14px !important;
-    line-height: 1.8 !important;
-    word-break: keep-all; /* 単語の途中で改行させない */
-  }
+
