@@ -164,7 +164,8 @@ section.hero .paw-icon {
 /* 写真の表示調整 */
 .photo-card img {
   width: 100%;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
   display: block;
 }
 
