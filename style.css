@@ -225,4 +225,34 @@ html, body {
     text-align: left; /* スマホで文章が読みづらい場合は左寄せ */
   }
 }
+/* スマホ画面向けの強力なレイアウト・文字サイズ調整 */
+@media screen and (max-width: 768px) {
+  /* 画面からはみ出るのを防ぐ */
+  body {
+    width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  /* 愛犬紹介とシーズー解説のタイトルサイズを縮小 */
+  .about h2,
+  .menu h2 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* 本文の文字サイズを小さくして改行崩れを防ぐ */
+  .about p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+    padding: 0 10px !important;
+  }
+
+  /* テーブル（原産国など）の幅を画面に合わせる */
+  .menu table {
+    width: 90% !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+  }
+}
 
