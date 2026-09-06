@@ -184,5 +184,45 @@ section.hero .paw-icon {
   color: #333;
   line-height: 1.5;
 }
+/* 画面全体が横スクロールしないように保護 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
+/* スマホ表示向けの調整 */
+@media (max-width: 768px) {
+  
+  /* 1. コンテナや文章の幅を画面に収める */
+  .about-text, 
+  .container {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* 2. 画像がスマホ画面からはみ出ないように固定 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 3. テーブル幅の自動調整 */
+  .menu table {
+    width: 100%;
+  }
+
+  /* 4. 文字サイズと余白の微調整 */
+  .about h2, 
+  .menu h2 {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left; /* スマホで文章が読みづらい場合は左寄せ */
+  }
+}
 
