@@ -204,6 +204,16 @@
 .back-button:hover {
     transform: scale(1.05);
 }
+.back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        transition: top 0.3s ease;
+        z-index: 100;
+    }
+    .back-button.is-shifted {
+        top: 75px;
+    }
 </style>
 </head>
 <body>
@@ -541,5 +551,18 @@
 </script>
 <!-- もどるボタン -->
 <a href="index.html" class="back-button">← ホームにもどる</a>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const startBtn = document.querySelector('.playBtn');
+      const backBtn = document.querySelector('.back-button');
+
+      if (startBtn && backBtn) {
+          startBtn.addEventListener('click', () => {
+              backBtn.classList.add('is-shifted');
+          });
+      }
+  });
+</script>
 </body>
 </html>
+
