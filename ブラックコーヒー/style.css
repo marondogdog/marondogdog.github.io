@@ -1,0 +1,318 @@
+✳︎{
+ padding: 0;
+    margin: 0;
+}
+header{
+   background-color:rgba(255, 0, 162, 0.632);
+   padding: 30px;
+   text-align: center;
+}
+header h1{
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+header nav ul{
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+}
+header nav ul li a{
+   text-decoration: none;
+   color: black;
+}
+
+
+section figure img 
+{
+   width: 100%;
+   height: 100%;
+}
+main .about{
+   background-color:rgb(104, 49, 49);
+   padding: 30px;
+   text-align: center;
+}
+main.about.container{
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+}
+main .about h2{
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+main .menu{
+   background-color:black;
+   color: white;
+   padding: 30px;
+   text-align: center;
+}
+main.about.container{
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+}
+main .menu h2{
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+main .menu table{
+   width: 100%;
+}
+main .menu table td{ 
+    padding: 10px 20px;
+}
+aside {
+   background-color: white;
+     padding: 30px;
+     text-align: center;
+}
+main.about.container{
+   width: 100%;
+   max-width: 700px;
+   margin: 0 auto;
+}
+aside h2{
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+aside p{
+   font-size: 20px;
+}
+aside figure img{
+   width: 150px;
+}
+aside .btn{
+   display: inline-block;
+   background-color: red;
+   color: white;
+   padding: 20px 80px;
+   border: 5px solid black;
+   border-radius: 80px;
+   text-decoration: none;
+}
+aside .btn:hover{
+   background-color: rgb(137, 57, 57);
+   color: white;
+}
+footer{
+   background-color:rgb(104, 49, 49);
+   color: white;
+   padding: 30px;
+   text-align: center;
+}
+/* 写真の枠に肉球を重ねる設定（余白を発生させない） */
+section.hero {
+  position: relative;
+  overflow: hidden; /* 写真からはみ出た肉球を隠す */
+}
+
+/* 重ねる大きな肉球の設定 */
+section.hero .paw-icon {
+  position: absolute;
+  font-size: 6rem; /* 肉球の大きさ */
+  z-index: 10;     /* 写真より手前（上）に表示 */
+  opacity: 0;
+  pointer-events: none; /* マウス操作の邪魔をしない設定 */
+  
+  /* 5秒かけて左下から右上へ走る */
+  animation: paw-run-on-image 5s linear forwards;
+}
+
+/* 写真の上を左下から右上へ走り抜けるアニメーション */
+@keyframes paw-run-on-image {
+  0% {
+    bottom: -80px;
+    left: -80px;
+    opacity: 0;
+    transform: rotate(35deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 80%;
+    left: 85%;
+    opacity: 0;
+    transform: rotate(35deg);
+  }
+}
+/* 写真ギャラリーの幅と余白の設定 */
+.photo-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.photo-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* 各写真カードの枠組み */
+.photo-card {
+  margin: 0 0 25px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 写真の表示調整 */
+.photo-card img {
+  width: 100%;
+  max-width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 600px) {
+  .photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+/* 写真の説明文 */
+.photo-caption {
+  padding: 12px 15px;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+/* 画面全体が横スクロールしないように保護 */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* スマホ表示向けの調整 */
+@media (max-width: 768px) {
+  
+  /* 1. コンテナや文章の幅を画面に収める */
+  .about-text, 
+  .container {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* 2. 画像がスマホ画面からはみ出ないように固定 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 3. テーブル幅の自動調整 */
+  .menu table {
+    width: 100%;
+  }
+
+  /* 4. 文字サイズと余白の微調整 */
+  .about h2, 
+  .menu h2 {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left; /* スマホで文章が読みづらい場合は左寄せ */
+  }
+}
+/* スマホ画面向けの強力なレイアウト・文字サイズ調整 */
+@media screen and (max-width: 768px) {
+  /* 画面からはみ出るのを防ぐ */
+  body {
+    width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  /* 愛犬紹介とシーズー解説のタイトルサイズを縮小 */
+  .about h2,
+  .menu h2 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* 本文の文字サイズを小さくして改行崩れを防ぐ */
+  .about p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+    padding: 0 10px !important;
+  }
+
+  /* テーブル（原産国など）の幅を画面に合わせる */
+  .menu table {
+    width: 90% !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+  }
+}
+/* --- 右方向への永続ウォークアニメーション --- */
+
+/* 通り道のレイアウト */
+.walk-path {
+  width: 100%;
+  height: 35px; /* 通り道の高さ（画像のサイズに合わせて調整OK） */
+  position: relative;
+  overflow: hidden; /* 画面からはみ出た犬を隠す */
+}
+
+/* 走る犬の設定 */
+.walking-person {
+  height: 70px; /* 犬の大きさ */
+  width: auto;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  mix-blend-mode: multiply; /* 画像の白い背景を透過 */
+  
+  /* アニメーション：3秒かけて右へループ（右足左足のトコトコ付き） */
+  animation: walk-one-way 3s linear infinite, step-bounce 0.3s ease-in-out infinite alternate;
+}
+
+/* 左から右へ進み、右端でパッと消えてまた左から現れる動き */
+@keyframes walk-one-way {
+  0% {
+    left: -40px; /* 画面の左外からスタート */
+    opacity: 1;
+  }
+  95% {
+    left: 100%; /* 画面の右端に到着 */
+    opacity: 1;
+  }
+  96%, 100% {
+    left: 100%; /* 右端で一旦消える準備 */
+    opacity: 0;
+  }
+}
+
+/* トコトコと上下に少し弾む動き */
+@keyframes step-bounce {
+  0% {
+    transform: translateY(-50%) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(-58%) rotate(3deg);
+  }
+}
+/* 4. ラグなしでループさせるキーフレーム */
+@keyframes dog-loop-smooth {
+  0% {
+    /* 画面の左側の十分な外側からスタート（画像が見えない位置から） */
+    left: -200px; 
+  }
+  100% {
+    /* 画面の右端のさらに外側まで移動しきる */
+    left: 100%; 
+  }
+}
+
+
