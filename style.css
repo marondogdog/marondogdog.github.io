@@ -428,6 +428,61 @@ header {
     /* ヘッダーの影（下の余白）を調整 */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+/* --- 1. すべての見出し（h2）の前に小さな足あと🐾を付ける --- */
+h2 {
+    /* 元々のスタイル（文字色や太さ）は維持しつつ、足あとを追加する準備 */
+    position: relative;
+    padding-left: 40px; /* 足あとを入れるスペースを確保 */
+}
+
+h2::before {
+    content: '🐾 '; /* 🐾の絵文字 */
+    position: absolute;
+    left: 0;       /* 見出しの左端に配置 */
+    top: 50%;      /* 縦方向の中央に合わせる */
+    transform: translateY(-50%) rotate(10deg); /* 少しだけ傾けて可愛くする */
+    font-size: 1.2em; /* 少し大きくする */
+    color: #d9a077;   /* 肉球の優しい茶色 */
+}
+
+/* --- 2. お散歩する犬（GIF）の通り道を芝生風にする --- */
+.walk-path {
+    width: 100%;
+    height: 50px; /* 通り道を少し高くする */
+    position: relative;
+    overflow: hidden;
+    
+    /* 通り道の背景を芝生のような優しいグリーンにする */
+    background-color: #d4e1d7;
+    
+    /* 通り道の上下に土手や道のようなラインを引く */
+    border-top: 2px solid #c0c9bf;
+    border-bottom: 2px solid #c0c9bf;
+    
+    /* 少しだけ影をつけて立体感を出す（内側の影） */
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 走る犬の画像自体の位置調整（芝生の上を走るように） */
+.walking-person {
+    height: 60px; /* 犬の画像を少し小さく調整 */
+    top: 50%;      /* 通り道の真ん中に配置 */
+}
+/* --- ページ切り替え時のフェードイン効果 --- */
+body {
+    /* 0.5秒かけてふんわり現れるアニメーション */
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* フェードインのアニメーションの中身 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 最初は透明 */
+    }
+    100% {
+        opacity: 1; /* だんだん不透明になる */
+    }
+}
 
 
 
