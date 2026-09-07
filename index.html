@@ -7,6 +7,18 @@
 <link rel="stylesheet" href="style.css">
 <!-- 丸っこくて可愛い日本語フォントを読み込む -->
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        transition: top 0.3s ease;
+        z-index: 100;
+    }
+    .back-button.is-shifted {
+        top: 75px;
+    }
+  </style>
 </head>
 <body>
    <header>
@@ -86,12 +98,24 @@
     <p style="margin-bottom: 10px; font-size: 0.9em;">今日もいっぱいお散歩したよ！また明日ね 🐾</p>
     <small>© 2026 マロンの日常. All rights reserved.</small>
 </footer>
-        <small>© 2026 マロンの日常. All rights reserved.</small>
    </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const startBtn = document.querySelector('.playBtn');
+      const backBtn = document.querySelector('.back-button');
 
-
+      if (startBtn && backBtn) {
+          startBtn.addEventListener('click', () => {
+              backBtn.classList.add('is-shifted');
+          });
+      }
+  });
+</script>
 </body>
 </html>
+
+
+
 
 
 

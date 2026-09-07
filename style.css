@@ -483,6 +483,10 @@ body {
         opacity: 1; /* だんだん不透明になる */
     }
 }
+/* 例：画面最下部に固定する要素がある場合 */
+.game-footer {
+    padding-bottom: env(safe-area-inset-bottom);
+}
 
 
 
