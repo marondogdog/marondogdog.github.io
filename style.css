@@ -1,6 +1,10 @@
-✳︎{
+* {
  padding: 0;
     margin: 0;
+}
+body {
+    /* サイト全体のフォントを可愛い丸ゴシックにする */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 header{
    background-color:rgba(255, 0, 162, 0.632);
@@ -314,5 +318,120 @@ html, body {
     left: 100%; 
   }
 }
+h1, h2 {
+    /* タイトルの文字を少し太くして、温かみのあるブラウンにする */
+    font-weight: 700;
+    color: #5c4033;
+    letter-spacing: 1px; /* 文字と文字の間を少し広げる上品なテクニック */
+}
+header nav ul li a, aside .btn {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 弾むようなアニメーション */
+}
+/* メニューのリンクにマウスを乗せたとき */
+header nav ul li a {
+    transition: 0.3s ease; /* 変化をなめらかにする */
+}
+header nav ul li a:hover {
+    opacity: 0.6; /* 少しだけ透明にしてふんわりさせる */
+    transform: translateY(-2px); /* ほんの少しだけ上に浮き上がる */
+}
+
+/* Youtubeボタンにマウスを乗せたとき（すでにありますが、さらに滑らかに） */
+aside .btn {
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover, aside .btn:hover {
+    transform: scale(1.1); /* 少しだけ大きくしてぷるっとさせる */
+}
+.photo-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* 上から下へ向かう、ナチュラルな森のグラデーション */
+    background: linear-gradient(to bottom, #d8e8dc, #f4f8f5);
+    /* 画面全体にしっかり背景が行き渡るようにする */
+    min-height: 100vh;
+}
+/* アサイド（最新情報）の背景を、少し透け感のある白にして、まわりの林の背景となじませる */
+aside {
+    background-color: rgba(255, 255, 255, 0.85); /* ほんのり透明な白 */
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+/* ブログの記事カードも同様にふんわりさせる */
+main article {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* 背景のベースの優しいグリーン */
+    background-color: #e5efe9;
+    
+    /* CSSだけで葉っぱや木漏れ日のような模様（ドットの重なり）を作るデザイン */
+    background-image: 
+        radial-gradient(#b8d8be 15%, transparent 16%),
+        radial-gradient(#b8d8be 15%, transparent 16%);
+    background-size: 30px 30px; /* 模様の細かさ（大きくすると葉っぱの間隔が広くなります） */
+    background-position: 0 0, 15px 15px; /* 模様をきれいに交差させる */
+    
+    min-height: 100vh;
+}
+/* --- 共通：ふんわり白いカードの設定 --- */
+/* 愛犬紹介、シーズー解説、最新情報のブロックを対象にする例 */
+.about,
+.menu,
+aside,
+main article { /* ブログの記事にも適用 */
+    background-color: rgba(255, 255, 255, 0.9); /* ほんのり透ける白（林の模様が透けて見えます） */
+    border-radius: 15px;  /* 角を丸くして絵本っぽく */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 優しい影で立体感を出す */
+    margin-bottom: 30px; /* 下の余白を少し広げる */
+    padding: 30px;       /* 中の余白をしっかり取る */
+}
+
+/* もし元々の背景色が濃い「愛犬紹介」や「シーズー解説」の文字色が見づらくなったら調整 */
+.about h2, .menu h2, aside h2 {
+    color: #5c4033; /* 温かみのあるブラウン系にする（もし白背景で黒文字がよければそのままでOK） */
+}
+
+/* --- 修正：カード内の余白をスッキリさせる --- */
+/* 各カードの中にあるコンテナの余白をリセットして、paddingで調整する */
+.about .about-text,
+.menu .container,
+aside .container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- ヘッダー（ピンク）をほんのり透けさせる設定 --- */
+header {
+    /* 元のrgbaの最後の数値（0.632）を少し小さくして透明度を上げる（例: 0.8） */
+    background-color: rgba(255, 182, 193, 0.8); 
+    
+    /* さらに背景をすりガラス風にぼかす（対応ブラウザのみ） */
+    backdrop-filter: blur(5px); 
+    
+    /* ヘッダーの影（下の余白）を調整 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
 
 

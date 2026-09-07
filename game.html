@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- 丸っこくて可愛い日本語フォントを読み込む -->
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>マロンのワンワン骨キャッチ</title>
@@ -184,6 +186,24 @@
     z-index:4;
     pointer-events:none;
   }
+  /* もどるボタンのデザイン */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #5c4033;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    z-index: 10;
+}
+.back-button:hover {
+    transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -519,5 +539,7 @@
   bestScoreEl.textContent = '最高記録：' + best + ' 個';
 })();
 </script>
+<!-- もどるボタン -->
+<a href="index.html" class="back-button">← ホームにもどる</a>
 </body>
 </html>
